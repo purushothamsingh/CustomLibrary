@@ -8,12 +8,15 @@ import { CommentsComponent } from './comments/comments.component';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import { FormsModule } from '@angular/forms';
 import {Editor, EditorModule} from 'primeng/editor';
+import { DatePipe } from '@angular/common';
+import { TopCommentComponent } from './topComment/topComment.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
-    CommentsComponent
-  ],
+    CommentsComponent,
+    TopCommentComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -23,7 +26,7 @@ import {Editor, EditorModule} from 'primeng/editor';
     FormsModule,
     EditorModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

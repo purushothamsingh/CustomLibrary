@@ -1,0 +1,31 @@
+<div>
+<div style="height: 10px;">
+<ng-container *ngFor="let item of commentArray ">
+  <div class="card text-black bg-white mb-3" style="max-width: 38rem; ">
+    <div class="">
+      <div class="card-header">CommentId- {{item.commentId}}</div>
+      <div class="card-body">
+        <h6 class="card-title">CommentText- {{item.commentText}}</h6>
+      </div>
+      <div class="replies">
+        <ng-container *ngFor="let item of item.replies">
+          <div class="card-header">ReplyId- {{item.replyId}}</div>
+          <div class="card-body">
+            <h6 class="card-title">ReplyText- {{item.replyText}}</h6>
+            <p class="card-text">ReplyOn- {{item.replyDate}} </p>
+          </div>
+      </ng-container>
+     
+      </div>
+      <div class="card-body">
+        <p class="card-text">CommentedOn- {{item.commentDate}} </p>
+        <p class="card-text">CreatedBy- {{item.createdBy}} </p>
+      </div>
+    </div>
+  
+   
+  </div>
+</ng-container>
+</div>
+
+</div>
